@@ -14,10 +14,12 @@ class BankAccount
   end
 
   def withdraw(amount)
-
+    if @balance >= amount 
+      @balance -= amount
+    end
   end
 
   def verify?(id, pin)
-
+    @account_number == id && @secret_code == pin
   end
 end
